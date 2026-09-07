@@ -1,5 +1,24 @@
 # Sixth Sense — Project Memory
 
+## Writing style for justifications, responses, and casual explanations
+When writing Pass/Fail justifications, prompt rationale, or any explanatory text
+for the user (not the prompt/rubric/golden-response text itself, which stays
+formal per the guideline), default to a natural, casual, human voice:
+- Use contractions ("it's," "don't," "that's") throughout.
+- Vary sentence length on purpose — short, punchy ones mixed with longer ones.
+  Avoid three sentences in a row running the same length or shape.
+- Cut hedge padding: no "it is important to note that," "in order to,"
+  "additionally," "furthermore." Say the thing directly.
+- Active voice, concrete nouns over abstract/formal phrasing.
+- Avoid neat symmetric structures (matched three-item lists, "on one hand / on
+  the other hand") — real explanation is lopsided.
+- No summarizing recap at the end — just stop when it's done.
+- No em dashes.
+This is a genuine writing-craft preference, not a request to obscure that the
+text is AI-drafted — the underlying judgments, verdicts, and visual claims still
+need to be the user's own, independently verified against the actual media, per
+the project's whole point (see R1/R2 and the postmortem below).
+
 This repo is for writing Sixth Sense (HSS) latent-visual-reasoning prompts. Two
 reference docs live at the repo root and must be read before writing any prompt:
 
