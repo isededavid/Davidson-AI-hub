@@ -121,6 +121,16 @@ proposing a prompt, independent of what the automated linter catches.
 5. **Cut losses on a piece of media after ~2 clean failures, not 5.** Iterating five different
    framings on one clip against a closing deadline was worse time management than switching media
    after the second failed premise.
+6. **Excavation/construction-site staging cues are a specific case of pitfall #3 — and a strong
+   one.** A Retrodiction prompt asked what a mesh-fenced, hand-cleared rubble wall revealed about
+   its excavation stage relative to a finished, catalogued street beside it. All three model
+   responses converged on the identical correct conclusion (early/active dig vs. completed site),
+   citing the same generic tells: safety mesh vs. no fencing, hand tools vs. absent machinery,
+   unswept soil vs. swept paving, no visitor amenities vs. a bench. R2 failed outright — 0 of 3,
+   not 2+. Any "which part of this site is finished vs. still being dug" question is answerable
+   from stock site-staging conventions alone; avoid it regardless of phrasing, and treat
+   fencing/hand-tools/swept-vs-unswept as unusable evidence for a *recency* conclusion on this kind
+   of media specifically.
 
 ## Known discrepancy between the two guideline docs
 - `Sixth-sense-guideline.pdf` (full, dated August 2026) is the more complete and more recent
