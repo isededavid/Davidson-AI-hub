@@ -103,6 +103,12 @@ When drafting a Sixth Sense prompt for this project:
    (often just 1). Only add another item if the prompt has a genuinely separate part to answer —
    never to restate the evidence behind the first item. Check every item is one idea only (#5
    above) before adding it.
+6. When the obvious question would rank/order several discrete objects (which one is first,
+   biggest, closest in sequence, etc.) — banned outright as a "counting/ordering" primary
+   challenge — check whether the same underlying insight survives as a single synthesized
+   judgment about the *stage* of one continuous event instead (e.g. not "which parachutist
+   jumped first" but "is this photo the start, middle, or tail end of the drop"). Same evidence,
+   no individual-item ranking, no ban triggered.
 
 ## Process pitfalls (learned from a single video that failed R1/R2 five times running)
 
@@ -144,6 +150,29 @@ proposing a prompt, independent of what the automated linter catches.
    from stock site-staging conventions alone; avoid it regardless of phrasing, and treat
    fencing/hand-tools/swept-vs-unswept as unusable evidence for a *recency* conclusion on this kind
    of media specifically.
+7. **Screen for vehicle license plates as PII, not just faces/minors.** A truck-show clip had two
+   fully legible plates on parked vehicles. Attention naturally goes to people when checking the
+   PII/minors/sensitive/NSFW question at Step 1 — a plate is easy to miss because it isn't a
+   person, but it identifies an owner via DMV records just the same. Explicitly scan vehicles,
+   name tags, and any other legible identifying text, not only faces.
+8. **Synthetic/CGI/virtual-world images are structurally weak media, independent of subject
+   matter.** A rendered 3D scene (glowing mechanical sculpture, no real agents or physics) had no
+   hidden state to infer — an entirely composed scene shows everything it's going to show; there's
+   no off-screen, no occlusion that means anything, no traces of a prior event. This is the PDF's
+   "flat, fully visible" skip case, but it applies to the whole media *type*, not just flat
+   compositions — treat non-photographic/non-video-of-reality media as a near-automatic skip.
+
+## Provisional patterns (one data point — not yet confirmed)
+Unlike the pitfalls above, this is a single success, not a repeated failure — treat it as a lead
+worth trying again, not a validated rule. The same caution pitfall #1 gives for over-reacting to
+one contradicting result applies in reverse to one confirming result.
+- A Hidden & Invisible prompt inferring a sealed mechanism's hidden physical state from its own
+  equilibrium logic (a lock gate's water pressure: since it's sealed shut, the visible side must be
+  the higher-pressure one, so the hidden side must be lower) passed R2 cleanly — 2 of 3 models
+  failed, and both failures were genuine misapplications of the mechanism (misreading the gate as
+  open; reversing which side the pressure favors), not ambiguity or generic-knowledge convergence.
+  Worth trying this shape again on other sealed/pressurized/equilibrium mechanisms (valves, dams,
+  balanced structures) before calling it a confirmed template.
 
 ## Known discrepancy between the two guideline docs
 - `Sixth-sense-guideline.pdf` (full, dated August 2026) is the more complete and more recent
@@ -154,3 +183,10 @@ proposing a prompt, independent of what the automated linter catches.
 - The brief docx's domain table omits **Spatial "Alien Viewpoint" and Reachability** as a
   subdomain (only lists 9 of the full PDF's 10). It still exists as a valid subdomain per the full
   PDF — just currently deprioritized per the "overused template" warning above.
+
+## Platform workflow quirks
+- **The A/B/C response order is not guaranteed stable across steps.** The Step 4 "Responses
+  preview" grid and the Step 9 judge-verdict confirmation screen showed the same three responses
+  under different letters. Match by the response's actual wording when giving verdicts or
+  justifications, never by the letter alone — a justification written against the wrong response
+  because the letters shifted is a real, easy mistake.
