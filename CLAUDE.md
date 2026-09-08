@@ -33,8 +33,27 @@ a model can score correctly by guessing.
 Prompts are rejected for opening with a stock attention-directing phrase — **"Focus on..."** is
 the specific one that got flagged, and phrases like it are heavily overused across the dataset.
 - Never open a prompt with "Focus on", "Consider", "Imagine", "Look at", or similar throat-clearing.
+- **Also flagged: leading with a stock conditional phrase — "If the..."** — even though the prompt
+  itself is a legitimate hypothetical. The fix is not to drop the hypothetical; it's to not place it
+  as the very first words. Fold the "if" clause into the middle/end of the sentence, or restructure
+  so the question itself leads.
 - Lead directly with the question itself; fold the subject identification, hypothetical setup, and
   grounding details into the question's own sentence structure instead of prefacing it.
+
+### 3b. Overused Prompt Template — T2 (open-ended consequence of a change)
+Beyond T3 (line-of-sight, see #1), there is a second named over-represented template: **T2**,
+described as "asking how an outcome would change if an element of the scene were altered." This
+covers the whole "if X were removed/changed, how would Y be affected?" counterfactual shape —
+not just sightline counterfactuals.
+- Avoid **both** T3 (line-of-sight/reachability) **and** T2 (if-X-changed, how-does-Y-change)
+  shapes. That rules out most Change & Consequence prompts phrased as a counterfactual removal or
+  alteration.
+- If the underlying insight is still worth using (e.g. "the PA speaker reaches a distant crowd"),
+  reframe it as a **direct "why" about the current, actual setup** rather than a hypothetical
+  alteration — e.g. "Why is X positioned/aimed the way it is?" instead of "If X were removed, what
+  would happen?" Same insight, different (non-templated) reasoning shape.
+- There is no way to know in advance which templates are currently over-represented — treat every
+  rejection-for-template-overuse as new data, and keep a running list here rather than guessing.
 
 ### 4. Rubric Contains Non-Mandatory Justification/Supporting Criteria (Critical)
 A rubric item gets removed if it only supplies supporting evidence/observations for the
