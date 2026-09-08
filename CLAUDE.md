@@ -161,6 +161,20 @@ proposing a prompt, independent of what the automated linter catches.
    no off-screen, no occlusion that means anything, no traces of a prior event. This is the PDF's
    "flat, fully visible" skip case, but it applies to the whole media *type*, not just flat
    compositions — treat non-photographic/non-video-of-reality media as a near-automatic skip.
+9. **Damage-diagnostic tells are a broader case of pitfall #6 — extend the caution beyond
+   excavation sites to any "which process caused this damage" question.** A Retrodiction prompt on
+   a fire-gutted building under demolition asked whether the ground floor's open, wall-less state
+   came from the fire itself or from human/mechanical removal. Two iterations of the same premise
+   (tightened wording each time) both landed at only 1 of 3 model failures — models reliably read
+   soot/char presence vs. clean unblemished surfaces, and debris resting inside a structure vs.
+   swept outside it, as decisive tells separating fire damage from mechanical stripping, and
+   reasoned to the correct conclusion from those tells alone. That's the same shape as the
+   excavation-site staging cues already flagged above: a well-documented forensic/construction
+   convention, not reasoning specific to the scene. Treat any "was this damage caused by process A
+   or process B" question resting on soot/char, debris location, surface scarring, rust vs. fresh
+   fracture, or similar standard damage-diagnostic tells as structurally weak regardless of
+   phrasing — these read as taught forensic conventions models apply reliably, not latent
+   reasoning.
 
 ## Provisional patterns (one data point — not yet confirmed)
 Unlike the pitfalls above, this is a single success, not a repeated failure — treat it as a lead
