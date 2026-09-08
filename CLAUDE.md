@@ -91,6 +91,37 @@ When drafting a Sixth Sense prompt for this project:
    never to restate the evidence behind the first item. Check every item is one idea only (#5
    above) before adding it.
 
+## Process pitfalls (learned from a single video that failed R1/R2 five times running)
+
+These are self-inflicted mistakes, not platform rules — things to check in my own reasoning before
+proposing a prompt, independent of what the automated linter catches.
+
+1. **Model consensus against my golden response means my premise is wrong, not that the task is
+   easy.** Twice, all three model responses agreed with each other and disagreed with my golden
+   answer (a crowd-growth narrative; a "podium is secondary" framing). The right reaction the first
+   time a model contradicts the golden answer with good evidence is to suspect the golden answer,
+   not to write it off as one model being unusually clever.
+2. **Don't finalize a premise from partial viewing.** Both flawed premises above were built before
+   checking specific seconds that mattered (the crowd was already visible at 6-8s; a PA speaker
+   existed and explained the "why"). Build the mental "exhaustive caption" of the *whole* clip
+   before designing the question, not incrementally, or confident-sounding wrong assumptions creep
+   in.
+3. **"Why does X make sense" is a trap when X has an obvious general-knowledge answer.** A prompt
+   asking why a PA speaker points away from the nearby seated group failed because "sound systems
+   aim at the far audience, not people already close enough to hear" is common knowledge any model
+   already carries — the video only supplied *which way* that pointed. Before proposing a prompt,
+   ask: could a generic real-world heuristic solve this if it just knew the one visible fact,
+   without reasoning about this specific scene? If yes, it's not a real latent-reasoning task no
+   matter the phrasing.
+4. **Static, unchanging objects are structurally risky for video tasks.** A fixed statue pose, a
+   draped banner, a mounted speaker — anything that doesn't change over the clip either risks being
+   single-frame-solvable or answerable by general knowledge once phrased as a question. The ideas
+   that survive longest need two temporally separated facts that no single moment or generic
+   heuristic can supply on its own.
+5. **Cut losses on a piece of media after ~2 clean failures, not 5.** Iterating five different
+   framings on one clip against a closing deadline was worse time management than switching media
+   after the second failed premise.
+
 ## Known discrepancy between the two guideline docs
 - `Sixth-sense-guideline.pdf` (full, dated August 2026) is the more complete and more recent
   source — treat it as authoritative over `Brief-sixth-sense-guideline.docx` where they conflict.
