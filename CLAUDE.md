@@ -36,6 +36,27 @@ the specific one that got flagged, and phrases like it are heavily overused acro
 - Lead directly with the question itself; fold the subject identification, hypothetical setup, and
   grounding details into the question's own sentence structure instead of prefacing it.
 
+### 4. Rubric Contains Non-Mandatory Justification/Supporting Criteria (Critical)
+A rubric item gets removed if it only supplies supporting evidence/observations for the
+conclusion, rather than being a separately-requested answer component.
+- If the prompt asks one question with one conclusion (e.g. "what does X suggest about Y"), only
+  the criterion stating that conclusion is mandatory — a second criterion restating the visual
+  evidence that supports it is "justification," not a required answer element, and gets flagged.
+- This applies even when that evidence was central to how you reasoned your way to the answer.
+  Mandatory means "the prompt asked for this specific output," not "this helped you get there."
+- Default to fewer rubric items, not more. Only add a second/third criterion when the prompt
+  itself has multiple parts or explicitly asks for reasoning ("...and explain why").
+
+### 5. Atomicity Check (Warning)
+A single rubric criterion that bundles two distinct properties into one sentence — e.g. "is much
+larger AND occupies the central floor space" (size + location) — gets flagged for not being atomic.
+- One idea per criterion, full stop, even inside a single clause. If a criterion needs "and" to
+  join two separate observations, split it into two — don't just avoid "and" while still stating
+  two distinct properties back to back.
+- This compounds with #4 above: a criterion can be flagged as both non-mandatory *and* non-atomic
+  at once. If a criterion is support/justification rather than a required answer element, the fix
+  is to remove it, not split it.
+
 ## Process implication
 When drafting a Sixth Sense prompt for this project:
 1. Pick a domain/subdomain deliberately different from whatever was just tried (don't repeat
@@ -46,6 +67,10 @@ When drafting a Sixth Sense prompt for this project:
    (Caption Test, R1/R2, one central challenge, no timestamps in the prompt, no audio dependence,
    single verifiable golden answer, video evidence spread across separated moments rather than
    solvable from one frame).
+5. When writing rubrics: start with as few items as the prompt's own question count requires
+   (often just 1). Only add another item if the prompt has a genuinely separate part to answer —
+   never to restate the evidence behind the first item. Check every item is one idea only (#5
+   above) before adding it.
 
 ## Known discrepancy between the two guideline docs
 - `Sixth-sense-guideline.pdf` (full, dated August 2026) is the more complete and more recent
