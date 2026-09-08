@@ -76,6 +76,19 @@ larger AND occupies the central floor space" (size + location) — gets flagged 
   at once. If a criterion is support/justification rather than a required answer element, the fix
   is to remove it, not split it.
 
+### 6. "Rubric criteria must be correct and grounded in media" AI-helper warning is not independent
+The platform runs an automated AI helper that flags rubric criteria it thinks are factually wrong,
+ungrounded, or redundant, with a note that it "can be imperfect on hard perception cases" and can
+be dismissed once you've verified against the media yourself.
+- Don't treat that warning as a second opinion by default — it can reproduce the *exact same*
+  misread one of the three model responses already made (e.g. calling closed lock gates "open"),
+  rather than checking independently. Seeing the AI helper agree with a wrong model response is not
+  corroboration.
+- Before dismissing or acting on the warning, re-verify the specific disputed fact against the
+  actual media yourself (or ask the person who has it open) — don't defer to the helper and don't
+  auto-dismiss it either. Once verified, the platform's own guidance is explicit that you may
+  dismiss a false-positive warning.
+
 ## Process implication
 When drafting a Sixth Sense prompt for this project:
 1. Pick a domain/subdomain deliberately different from whatever was just tried (don't repeat
