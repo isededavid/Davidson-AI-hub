@@ -52,12 +52,28 @@ The model sees the whole clip, not just the annotated evidence window — the wi
 where the *relevant* evidence sits. So "what happens next" only works if that future state is
 never shown anywhere in the full clip.
 
+**8. Ambiguity is disqualifying even if it produces model "failures."**
+Per the project's own onboarding material: every prompt must have a single, objectively correct
+answer. If more than one answer could reasonably be defended, the prompt must be rewritten —
+full stop. Models giving different answers to an ambiguous prompt is NOT a valid R2 pass; it's
+not a true model failure if there was no objective answer to begin with. Always ask "could a
+careful person reasonably disagree with the golden answer?" before counting any disagreement as
+signal. (Bad-example pattern from onboarding: "How are the dangling lights on the left side of
+the image being held up?" — fails because it's not visible/determinable, not because it's hard.)
+
 ## Workflow efficiency
 
-- No `ffmpeg`/`ffprobe` preinstalled in this environment. Fix once per session:
-  `pip install imageio-ffmpeg` (bundles a static binary), then use
-  `python3 -c "import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())"` to get its path.
-  Costs a few seconds; not the real bottleneck.
+- `ffmpeg`/`opencv` (`cv2`) are NOT preinstalled and do NOT persist across sessions — each new
+  session gets a fresh container, so this setup must be redone every time:
+  - `apt-get update -qq && apt-get install -y -qq ffmpeg` (installs both `ffmpeg` and `ffprobe`
+    system-wide; preferred over the old `pip install imageio-ffmpeg` fallback now that apt works).
+  - `pip install opencv-python-headless` (use the headless build on a server — the full
+    `opencv-python` pulls in GUI/X11 deps that aren't needed here and can fail to import).
+  - If `apt-get` fails on unrelated third-party PPAs (e.g. deadsnakes, ondrej/php returning 403
+    from the proxy), that's harmless noise — the main Ubuntu repos still resolve and the install
+    still succeeds; don't chase those errors.
+  - Consider a `session-start-hook` (see that skill) to run this automatically at container start
+    instead of redoing it by hand each session.
 - The real time cost is broad exploratory frame sweeps (extracting/viewing 20-25 frames just to
   get oriented) plus repeated narrow re-extractions per candidate hypothesis. Prefer targeted
   extraction around a specific already-suspected moment over broad sweeps when possible.
