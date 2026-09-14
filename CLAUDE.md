@@ -257,6 +257,22 @@ proposing a prompt, independent of what the automated linter catches.
    no off-screen, no occlusion that means anything, no traces of a prior event. This is the PDF's
    "flat, fully visible" skip case, but it applies to the whole media *type*, not just flat
    compositions — treat non-photographic/non-video-of-reality media as a near-automatic skip.
+9. **"Which part of a cleanup/progress task is done vs. not-done" is a specific case of pitfall #3
+   / #6 — wet-vs-dry cleaning-progress tells are model-obvious.** A Retrodiction image prompt asked
+   which stretch of a mopped kitchen corridor was already finished vs. still needed cleaning, using
+   foam density near the door vs. near the camera as the cue. All three model responses converged
+   on the identical correct answer (door-side clean/reflective, camera-side still soapy), citing
+   the same generic tell: glossy rinsed tile with no lather vs. thick foam pooling. 0 of 3 failed —
+   not even 2+. Like the dig-site case, "which part of an ongoing task is complete vs. incomplete"
+   reads directly off universal completion cues (clean-and-dry vs. dirty-and-wet; swept vs.
+   unswept; fenced-off vs. finished) regardless of the specific scene — treat any
+   done-vs-still-to-do framing as a near-automatic skip, not just this literal wet/dry case.
+   Also worth noting: single-person, mostly-static utility/back-of-house photos (one agent, no
+   readable face, no ambiguous shapes, no second social actor) may simply be thin media for the
+   image-eligible subdomains (Retrodiction, Mechanistic Causality, Theory of Mind, Social
+   Role/Norm & Power, Patterns & Pareidolia) — if the first attempt's premise turns out
+   model-obvious, check whether the media has enough *other* latent surface area before spending a
+   second attempt on it, per pitfall #5.
 
 ## Provisional patterns (one data point — not yet confirmed)
 Unlike the pitfalls above, this is a single success, not a repeated failure — treat it as a lead
