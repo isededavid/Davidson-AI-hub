@@ -1,0 +1,155 @@
+
+Sixth Your response will be considered incomplete and scored at 0 points if there isn't a thin space in your response. Sixth Sense - Attempter Guidelines
+Select an image or video from the library — click the paperclip below the prompt box, then Browse library — and write a prompt containing one or more questions based on it.
+
+Check the media before you build anything on it. If it contains personally identifiable information, minors, sensitive or graphic content, or NSFW material, go back to the library and select something else.
+
+Your task ends at the prompt. A reviewer builds the rubrics and golden response on top of what you wrote and does not edit it, so the prompt is the whole job.
+
+For Photos
+The answer must come from an inference about the scene, not from searching it carefully.
+For Videos
+The answer must require evidence from more than one moment in the evidence window.
+
+It must not be resolvable from the frames around any single moment.
+
+Record a start and end timestamp in XX:XX–XX:XX format.
+
+Minimum 1% of the video's total duration.
+
+Build the question around evidence that appears later in the clip. Anything answerable from the opening frames is not acceptable.
+
+Where evidence is spread across the clip, record the earliest relevant timestamp as the start and the latest as the end.
+
+Video is worth reaching for on social and temporal tasks. Intentions, relationships and causes reveal themselves across a sequence, and change-over-time questions break models more reliably than stills do.
+
+Your Prompt Must
+Clear the Caption Test (see below). Perception-based prompts are a significant quality issue.
+
+Match one of the 4 domains and 10 subdomains below.
+
+Keep every question on the same central latent visual reasoning challenge.
+
+Support one clearly verifiable ideal answer - we have seen a lot of prompts where there isn't an objective or clear answer.
+
+Be answerable in about five seconds, with no enumerating, counting, or arithmetic.
+
+Depend on the media, not be answerable from the prompt alone.
+
+Name the specific person, object, or event in question.
+
+Read naturally, and be understood the first time through.
+
+Be difficult enough that at least 2 of the 3 model responses get the answer wrong.
+
+Your Prompt Must Not
+Contain timestamps. Identify moments by what is visible.
+
+Depend on audio, or on reading text in the media.
+
+Reveal or assume the answer.
+
+Overstate certainty.
+
+Rest on counting, ordering, reading, color, object naming, size comparison, gaze, or on-screen motion as the primary challenge.
+
+Be hard because of ambiguity, unclear wording, missing context, subjectivity, or poor media quality.
+
+The Caption Test
+Imagine an exhaustive, literal transcript of the media: every object, its position, colour, size, orientation and posture, and everything that happens in every frame, in order. No interpretation. Just what is there.
+
+Would the answer to your question appear, verbatim, in that transcript?
+
+Yes → not for HSS. The transcript contains the answer and your question only asks the reader to locate it. Do not submit these.
+
+No → good for HSS. The transcript is complete and the answer still is not in it. It has to be derived by a step the transcript cannot perform.
+
+A prompt that clears the Caption Test still has to be quick and shared:
+
+Answerable in about five seconds of looking.
+
+Another annotator viewing the same media reaches the same answer.
+
+If your question requires deliberate search, careful counting, or ordering a sequence of events, it is not for HSS no matter how hard it is.
+
+4 Domains, 10 Named Subdomains
+Temporal & Causal Dynamics (time)
+
+Retrodiction — inferring what already happened from visual traces.
+
+Mechanistic Causality — identifying the immediate physical mechanism driving an ongoing event.
+
+Extrapolation — predicting the immediate trajectory or longer-term outcome of the current scene.
+
+Physical & Spatial Logic (space)
+
+Hidden & Invisible — reasoning about what is occluded, off-screen or inside containers, and about non-visual properties and forces inferred from visible cues.
+
+Affordance & Feasibility — whether an action or interaction can actually be achieved, given the agent, the objects and the environment.
+
+Spatial "Alien Viewpoint" and Reachability — re-projecting the scene to work out line of sight or reach from a different position.
+
+Social Understanding (mind)
+
+Theory of Mind — the beliefs, knowledge gaps, deceptions of an agent.
+
+Social Role, Norm & Power Dynamics — unwritten social contracts, etiquette, and cultural appropriateness.
+
+Abstract & Contextual Inference (context)
+
+Change & Consequence — a change the scene does not contain: given the change, its consequence; or given the consequence, the change required to produce it.
+
+Patterns & Pareidolia — structure in random data, or the pull to see familiar patterns, especially faces and figures, in noise and incidental arrangements.
+
+If your prompt fits none of these, that is evidence it is not for HSS. Rewrite it rather than forcing a selection.
+
+The Rest of the Task
+Set the media type, and the evidence window for video.
+
+Select the domain and subdomain.
+
+Give each of the three model responses a Pass or Fail verdict with a short justification.
+
+Report how many failed. Fewer than two means the prompt is not hard enough — revise it and try again.
+
+Follow the Sixth Sense Attempter Guidelines closely.
+Review the instructions and make sure you understand the requirements of this project.
+
+
+⚠️ Your response will be considered incomplete and scored at 0 points if there isn't a thin space in your response. ⚠️ Subdomain Quick Reference
+Every prompt must be about the main thing happening in the media, and must not be awkwardly worded.
+
+🎬 Video only — images will not be accepted
+Extrapolation · Hidden & Invisible · Affordance & Feasibility · Spatial "Alien Viewpoint" & Reachability · Change & Consequence
+
+Select one of these five and you cannot submit an image. Pick your media accordingly before you write.
+
+🖼️ Image or video: Retrodiction · Mechanistic Causality · Theory of Mind · Social Role Norm & Power · Patterns & Pareidolia
+
+🚩 Saturated topics — these prompts get flagged
+We have enough of the topics below. A prompt written on one will be flagged even if it is otherwise well built. Reach for the ✅ list instead.
+
+Extrapolation
+🚩 Frame exit · collision along a path · direction of travel
+✅ Acceleration/deceleration ("will she stop before the curb?") · trend over time (queue growing, water rising) · interception ("will these two meet, and where?") · occlusion mid-path ("in front of or behind the pillar?") · reactive agents ("would the cyclist swerve, and which way?") · "cannot be determined" answers
+
+Hidden & Invisible
+🚩 Light / sun / shadow · wind
+✅ Wetness · dust · heat · sound sources · force & tension · reflections · blur · container contents from deformation or handling · material properties (heavy, hot, fragile) · what is behind the camera
+
+Affordance & Feasibility
+🚩 Vehicles · falling straight down · insertion and fit · motion
+✅ Stability & tipping · load-bearing · support & stacking · grasp span · tool adequacy ("is the ladder tall enough?") · sequencing ("couch out without moving the table?") · deformability (roll, fold, squeeze, bend) · aperture mismatch (fits by area, not cross-section) · timing ("cross before the train arrives?") · collaboration (can A and B do it together?) · who or which can do it · 3D volume · arc & radius · liquid volume · aggregate packing (all the books re-shelved)
+
+Spatial "Alien Viewpoint" & Reachability
+🚩 Binary can-you-see · graded occlusion (full/partial/none) · "if you turned left, could you see"
+✅ Reachability ("reach the top shelf without standing?") · two-agent joint reach ("pass the box without moving their feet?") · mutual visibility (both ways or one?) · facing as a viewpoint proxy · non-human viewpoints · very large or very small scenes · how many / when / how / where / why · "nothing blocks it" answers
+
+Theory of Mind
+🚩 Intention · emotion
+✅ Belief, knowledge, attitude, attention · false belief & knowledge asymmetry ("A hides it while B is away — where will B look?") · perspective divergence · deception & concealment · second order ("does she realise he knows?") · surprise as a violated expectation · sarcasm · embarrassment, pride, shame · predicting action from a mistaken belief · genuinely ambiguous mental states
+
+Change & Consequence
+🚩 Fall or detachment · impact target (what it hits)
+✅ Liquid & spill ("where does it flow, what gets wet?") · thermal & state change · removal — what fills or is exposed · load transfer ("if he lets go, who bears the weight?") · consequence on a process rather than an object · longer horizon (falls, then rolls, then what) · reversibility · rotational, optical and fluid effects · "in order to do X, what should a person do?" · "nothing happens, and here's why" answers
+
