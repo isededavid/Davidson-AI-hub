@@ -1,7 +1,7 @@
 #!/bin/bash
 # Installs ffmpeg (ffmpeg/ffprobe), opencv-python-headless and audio-review
-# packages so video frame extraction and audio review work out of the box in every Claude Code on the web session for
-# this repo, instead of reinstalling them (and burning tokens re-deriving the
+# packages so video frame extraction and audio review work out of the box in
+# every Claude Code on the web session for this repo, instead of reinstalling them (and burning tokens re-deriving the
 # fix) each time a Sixth Sense video task needs analyzing.
 set -euo pipefail
 
