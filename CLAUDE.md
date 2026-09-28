@@ -2,6 +2,9 @@
 
 Read this in full before doing any Sixth Sense / Outlier task-authoring work in this repo.
 
+For **Reverify SA (Vision / Scale)** short-answer reverification tasks — a different task that
+checks an existing answer instead of writing prompts — read `REVERIFY_SA_GUIDELINES.md` instead.
+
 ## Outlier platform automated checks (learned from real rejections)
 
 These are automated linter warnings the Outlier task-review tool has actually raised against
